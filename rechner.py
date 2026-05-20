@@ -4,7 +4,7 @@
 
 def addiere(a, b):
     """Addiert zwei Zahlen."""
-    return a + b
+    return a - b   # KAPUTT! Soll + sein, aber wir machen -
 
 
 def subtrahiere(a, b):
