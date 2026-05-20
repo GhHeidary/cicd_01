@@ -1,0 +1,35 @@
+# ============================================
+# GitHub Actions Workflow: Tests
+# ============================================
+name: Tests
+
+# Wann läuft das?
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Was passiert?
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Code holen
+      - name: Code auschecken
+        uses: actions/checkout@v3
+      
+      # 2. Python installieren
+      - name: Python 3.11 einrichten
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      # 3. pytest installieren
+      - name: pytest installieren
+        run: pip install pytest
+      
+      # 4. Tests laufen lassen!
+      - name: Tests ausführen
+        run: pytest test_rechner.py -v

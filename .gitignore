@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# pytest
+.pytest_cache/
+.coverage
+
+# VS Code
+.vscode/
+
+# Conda / Virtual envs
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
