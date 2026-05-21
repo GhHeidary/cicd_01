@@ -22,7 +22,9 @@ def dividiere(a, b):
     if b == 0:
         raise ValueError("Division durch Null nicht erlaubt!")
     return a / b
-
+def potenz(a, b):
+    """ Berechnet a hoch b"""
+    return a ** b
 
 if __name__ == "__main__":
     print(f"2 + 3 = {addiere(2, 3)}")

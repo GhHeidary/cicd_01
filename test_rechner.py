@@ -1,5 +1,5 @@
 import pytest
-from rechner import addiere, subtrahiere, multipliziere, dividiere
+from rechner import addiere, subtrahiere, multipliziere, dividiere, potenz
 
 
 def test_addiere():
@@ -29,3 +29,10 @@ def test_dividiere():
 def test_dividiere_durch_null():
     with pytest.raises(ValueError):
         dividiere(10, 0)
+
+        
+def test_potenz():
+    """Test: Potenz funktioniert."""
+    assert potenz(2, 3) == 8
+    assert potenz(5, 2) == 25
+    assert potenz(10, 0) == 1
